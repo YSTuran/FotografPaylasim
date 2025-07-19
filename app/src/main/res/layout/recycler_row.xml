@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC107"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/recyclerEmailText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00BCD4"
+        android:padding="15dp"
+        android:text="Kullanıcı E-Mail"
+        android:textSize="20dp"></TextView>
+    
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/recyclerCommentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#00BCD4"
+        android:padding="15dp"
+        android:text="Kullanıcı Yorum"
+        android:textSize="15dp"></TextView>
+    
+
+
+</LinearLayout>
