@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.Navigation
 import yusufs.turan.fotografpaylasim.databinding.FragmentKullaniciBinding
 
 
@@ -32,7 +34,9 @@ class KullaniciFragment : Fragment() {
     }
 
     fun kaydol(view: View){
-        println("Kayıt Yapıldı")
+        Toast.makeText(context, "Kayıt Oluşturuldu", Toast.LENGTH_LONG).show()
+        val action = KullaniciFragmentDirections.actionKullaniciFragmentToFeedFragment()
+        Navigation.findNavController(view).navigate(action)
     }
 
     fun giris(view: View){
