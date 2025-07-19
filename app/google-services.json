@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "81937752107",
+    "project_id": "fotografpaylasim-9365d",
+    "storage_bucket": "fotografpaylasim-9365d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:81937752107:android:c302afd8b09e26f7550a6e",
+        "android_client_info": {
+          "package_name": "yusufs.turan.fotografpaylasim"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPDy2RRrNmbMSm0jpltvAWfrReGhzGjyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
