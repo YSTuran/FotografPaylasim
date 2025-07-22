@@ -20,6 +20,11 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import yusufs.turan.fotografpaylasim.databinding.FragmentKullaniciBinding
 import yusufs.turan.fotografpaylasim.databinding.FragmentYuklemeBinding
 
@@ -31,10 +36,14 @@ class YuklemeFragment : Fragment() {
     private lateinit var permissionLauncher : ActivityResultLauncher<String>
     private var secilenResim : Uri? = null
     private var secilenBitmap : Bitmap? = null
+    private lateinit var auth: FirebaseAuth
+    private lateinit var storage: FirebaseStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         registerLauncher()
+        auth = Firebase.auth
+        storage = Firebase.storage
     }
 
     override fun onCreateView(
@@ -61,6 +70,15 @@ class YuklemeFragment : Fragment() {
     private fun gonderiYukle() {
         Toast.makeText(requireContext(), "Gönderi yüklendi (dummy)", Toast.LENGTH_SHORT).show()
         // Buraya Firebase'e yükleme kodları vb. yazılacak
+        val reference = storage.reference
+        val gorselReferansi = reference.child("images").child("image.jpg")
+        if(secilenResim != null){
+            gorselReferansi.putFile(secilenResim!!).addOnSuccessListener { uploadTask->
+                //url alma işlemi
+            }.addOnFailureListener { exception->
+                Toast.makeText(requireContext(), exception.localizedMessage, Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     private fun gorselSec(view: View) {
