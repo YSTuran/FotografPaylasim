@@ -1,4 +1,4 @@
-package yusufs.turan.fotografpaylasim
+package yusufs.turan.fotografpaylasim.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

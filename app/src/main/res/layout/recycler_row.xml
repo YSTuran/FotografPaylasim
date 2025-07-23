@@ -14,13 +14,13 @@
         android:padding="15dp"
         android:text="Kullanıcı E-Mail"
         android:textSize="20dp"></TextView>
-    
+
     <ImageView
+        android:id="@+id/recyclerImageview"
         android:layout_width="350dp"
         android:layout_height="220dp"
-        android:layout_margin="5dp"
         android:layout_gravity="center"
-        ></ImageView>
+        android:layout_margin="5dp"></ImageView>
 
     <TextView
         android:id="@+id/recyclerCommentText"

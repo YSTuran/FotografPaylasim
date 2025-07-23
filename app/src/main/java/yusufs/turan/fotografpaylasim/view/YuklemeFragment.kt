@@ -1,4 +1,4 @@
-package yusufs.turan.fotografpaylasim
+package yusufs.turan.fotografpaylasim.view
 
 import android.Manifest
 import android.app.Activity.RESULT_OK
@@ -29,10 +29,8 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.ktx.storage
-import yusufs.turan.fotografpaylasim.databinding.FragmentKullaniciBinding
 import yusufs.turan.fotografpaylasim.databinding.FragmentYuklemeBinding
 import java.util.UUID
-import kotlin.uuid.Uuid
 
 class YuklemeFragment : Fragment() {
 
